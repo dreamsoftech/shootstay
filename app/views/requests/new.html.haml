@@ -1,0 +1,33 @@
+%form{"accept-charset" => "UTF-8", action: "https://fn153.infusionsoft.com/app/form/process/ffe444d91cc9797fd7d624605ca55678", method: "POST"}
+  %input{name: "inf_form_xid", type: "hidden", value: "ffe444d91cc9797fd7d624605ca55678"}/
+  %input{name: "inf_form_name", type: "hidden", value: "App / Requests / New"}/
+  %input{name: "infusionsoft_version", type: "hidden", value: "1.29.7.39"}/
+  %input{name: "inf_field_Email", type: "hidden", value: ""}/
+  %input{name: "inf_custom_ShootstayPreferred1City", type: "hidden", value: ""}/
+  %input{name: "inf_custom_ShootstayPreferred1State", type: "hidden", value: ""}/
+  %input{name: "inf_custom_ShootstayPreferred2City", type: "hidden", value: ""}/
+  %input{name: "inf_custom_ShootstayPreferred2State", type: "hidden", value: ""}/
+  %label Preferred Location 1 *
+  %select#app-ideal-location-1
+    %option Search for locations
+  %label Preferred Location 2 *
+  %select#app-ideal-location-2
+    %option Search for locations
+  %label{for: "inf_custom_ShootstayLocationType"} Location Type *
+  %select{multiple: "multiple", name: "inf_custom_ShootstayLocationType"}
+    %option{value: "Beach"} Beach
+    %option{value: "Downtown"} Downtown
+    %option{value: "Lake"} Lake
+    %option{value: "Mountain"} Mountain
+    %option{value: "Near The Ocean"} Near The Ocean
+    %option{value: "River"} River
+    %option{value: "Waterfront"} Waterfront
+    %option{value: "Golf"} Golf
+    %option{value: "Skiing"} Skiing
+  %label{for: "inf_custom_ShootstayDateStart"} Date Start *
+  %input{name: "inf_custom_ShootstayDateStart", type: "text"}/
+  %label{for: "inf_custom_ShootstayDateEnd"} Date End *
+  %input{name: "inf_custom_ShootstayDateEnd", type: "text"}/
+  %label{for: "inf_custom_ShootstayNotes"} Notes *
+  %textarea{cols: "24", name: "inf_custom_ShootstayNotes", rows: "5"}
+  %input{type: "submit", value: "Submit"}/

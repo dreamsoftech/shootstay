@@ -1,10 +1,24 @@
-%h2 Sign up
-= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => {:class => 'form-vertical' }) do |f|
-  = f.error_notification
-  = display_base_errors resource
-  = f.input :name, :autofocus => true
-  = f.input :email, :required => true
-  = f.input :password, :required => true
-  = f.input :password_confirmation, :required => true
-  = f.button :submit, 'Sign up', :class => 'btn-primary'
-= render "devise/shared/links"
+.account-container.register.stacked
+  .content.clearfix
+    - @user.email       = params[:inf_field_Email]
+    - @user.contact_id  = params[:contactId]
+
+    = simple_form_for(@user, :as => resource_name, :url => registration_path(resource_name), :html => {:class => 'form-vertical' }) do |f|
+      = f.hidden_field :email
+      = f.hidden_field :contact_id
+      %h1 Create Your Account
+      .login-fields
+        %p Create your free account:
+
+        .field
+          = f.input :password, input_html: { class: "form-control" }, placeholder: "Password", :autofocus => true
+
+        .field
+          = f.input :password_confirmation, input_html: { class: "form-control" }, placeholder: "Password Confirmation"
+
+      .login-actions
+        %span.login-checkbox
+          %input#Field.field.login-checkbox{name: "Field", tabindex: "4", type: "checkbox", value: "First Choice"}/
+          %label.choice{for: "Field"} I have read and agree with the Terms of Use.
+        %button.login-action.btn.btn-primary Register
+      / .actions

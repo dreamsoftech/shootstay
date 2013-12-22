@@ -1,0 +1,33 @@
+.container
+  %form.form-horizontal{"accept-charset" => "UTF-8", action: "https://fn153.infusionsoft.com/app/form/process/402c91595cb9d1d81b13fb75f26949d4", method: "POST"}
+    %input{name: "inf_form_xid", type: "hidden", value: "402c91595cb9d1d81b13fb75f26949d4"}/
+    %input{name: "inf_form_name", type: "hidden", value: "Apply"}/
+    %input{name: "infusionsoft_version", type: "hidden", value: "1.29.8.45"}/
+  
+    .form-group
+      %label.col-sm-3.control-label{for: "inf_field_FirstName"} First Name *
+      .col-sm-6
+        %input#inf_field_FirstName.form-control{name: "inf_field_FirstName", type: "text"}/
+    .form-group
+      %label.col-sm-3.control-label{for: "inf_field_LastName"} Last Name *
+      .col-sm-6
+        %input#inf_field_LastName.form-control{name: "inf_field_LastName", type: "text"}/
+    .form-group
+      %label.col-sm-3.control-label{for: "inf_field_Email"} Email *
+      .col-sm-6
+        %input#inf_field_Email.form-control{name: "inf_field_Email", type: "text"}/
+    .form-group
+      %label.col-sm-3.control-label{for: "inf_field_Website"} Portfolio *
+      .col-sm-6
+        %input#inf_field_Website.form-control{name: "inf_field_Website", type: "text"}/
+    .form-group
+      %label.col-sm-3.control-label{for: "inf_field_City"} City *
+      .col-sm-6
+        %input#inf_field_City.form-control{name: "inf_field_City", type: "text"}/
+    .form-group
+      %label.col-sm-3.control-label{for: "inf_field_State"} State *
+      .col-sm-6
+        %input#inf_field_State.form-control{name: "inf_field_State", type: "text"}/
+    .form-group
+      .col-sm-offset-3.col-sm-6
+        %button.btn.btn-primary{type: "submit"} Submit
